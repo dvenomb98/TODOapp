@@ -1,0 +1,286 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.group:before,
+.group:after {
+  content: " ";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+body {
+  background: #161722;
+  font-size: 1.2em;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.db {
+  margin: 4em 0;
+}
+
+header {
+  width: 100%;
+  min-height: 100%;
+  background-image: url(../img/bg-desktop-dark.jpg);
+  background-repeat: no-repeat;
+  background-position: left center/cover;
+  position: relative;
+}
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: row;
+  color: #fafafa;
+  width: 100%;
+  letter-spacing: 0.5em;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.switcher {
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
+}
+
+.switcher2 {
+  display: none;
+}
+
+section {
+  color: #d2d3db;
+  text-align: center;
+}
+
+.section-content {
+  width: 30em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  margin-left: -288px;
+  top: 2em;
+}
+
+.elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 30em;
+}
+
+.text-box, .create, .done {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  border-bottom: 0.5px solid rgba(128, 128, 128, 0.349);
+  width: 100%;
+  background: #25273c;
+  cursor: pointer;
+  text-align: left;
+  padding-right: 1em;
+}
+
+.text-box:first-child {
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+}
+
+.create {
+  border-radius: 0.3em;
+}
+
+.text-box img, .done img {
+  width: 0.8em;
+  height: 0.8em;
+}
+
+.circle2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1.3em;
+  min-width: 1.3em;
+  max-height: 1.3em;
+  max-width: 1.3em;
+  border-radius: 50%;
+  margin: 1em;
+  background: linear-gradient(#57ddff, #c058f3);
+}
+
+.img-inactive {
+  display: none;
+}
+
+.img-active {
+  display: block;
+}
+
+.text {
+  text-decoration: none;
+}
+
+.text:hover, .text:focus {
+  color: #4d5066;
+  transition: 0.35s;
+}
+
+.text2 {
+  text-decoration: line-through;
+  color: #4d5066;
+}
+
+.circle {
+  min-height: 1.3em;
+  min-width: 1.3em;
+  max-height: 1.3em;
+  max-width: 1.3em;
+  border: 1.8px solid rgba(128, 128, 128, 0.349);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 1em;
+}
+
+.create {
+  border: none;
+  margin-bottom: 2em;
+  cursor: default;
+}
+
+input {
+  background: #25273c;
+  border: none;
+  color: #e4e5f1;
+  width: 80%;
+  padding: 0.5em;
+  margin-left: -0.5em;
+}
+
+input::placeholder {
+  color: #e4e5f1;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.8em;
+  width: 100%;
+  background: #25273c;
+  color: #4d5066;
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+}
+
+.functions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #25273c;
+}
+
+.all, .active, .completed {
+  padding: 0 1em;
+}
+
+.bottom p:hover, .bottom p:focus, .functions2 p:focus, .functions2 p:hover {
+  color: #e4e5f1;
+  transition: 0.35s;
+  cursor: pointer;
+}
+
+.functions2 {
+  display: none;
+}
+
+@media screen and (max-width: 625px) {
+  header {
+    background-image: url(../img/bg-mobile-dark.jpg);
+    background-size: 100%;
+    width: 100%;
+    min-height: 100%;
+  }
+  body {
+    font-size: 1em;
+  }
+  .section-content {
+    margin-left: -240px;
+    top: 8em;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .section-content {
+    margin-left: -192px;
+    top: 5em;
+  }
+  body {
+    font-size: 0.8em;
+  }
+  .text, .create, .bottom, .text2, .functions2 p {
+    padding: 0.7em 0;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  body {
+    font-size: 0.7em;
+  }
+  .section-content {
+    margin-left: -168px;
+    top: 6em;
+  }
+  .bottom {
+    flex-direction: row;
+  }
+  .text-box, .create, .done, .bottom, .headline {
+    width: 80%;
+  }
+  .functions {
+    display: none;
+  }
+  .functions2 {
+    display: flex;
+    flex-direction: row;
+    background: #25273c;
+    width: 80%;
+    border-radius: 0.3em;
+    margin-top: 2em;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+  }
+  .functions2 p {
+    color: #4d5066;
+    font-size: 0.8em;
+  }
+}
