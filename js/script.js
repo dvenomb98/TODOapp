@@ -44,7 +44,7 @@ $('.elements').on('click','.text-box p:last-of-type', function () {
 
      // DELETING A NEW ELEMENT
 
-     $('.elements').on('click','.text-box img:last-of-type', function () {
+     $('.elements').on('click','.text-box .deleting', function () {
         $(this).parent().remove();
 
         //recount
