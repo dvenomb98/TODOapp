@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 //CHANGING COMPLETE STATE ON CLICK //
 
-$('.elements').on('click','.text-box p:last-of-type', function () {
+$('.elements').on('click','.text-box p', function () {
    $(this).parent().toggleClass("default done");
    $(this).parent().find("p:first").toggleClass('circle circle2');
    $(this).parent().find('img').toggleClass('img-inactive img-active');
